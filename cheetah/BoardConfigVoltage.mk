@@ -6,4 +6,4 @@
 
 include device/google/pantah/BoardConfigVoltage.mk
 
-include vendor/google/panther/BoardConfigVendor.mk
+include vendor/google/cheetah/BoardConfigVendor.mk
