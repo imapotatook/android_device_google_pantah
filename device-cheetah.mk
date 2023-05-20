@@ -273,7 +273,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=19
+    ro.vendor.build.svn=20
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -342,7 +342,7 @@ endif
 
 # Keyboard bottom and side padding in dp for portrait mode and height ratio
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.com.google.ime.kb_pad_port_b=8 \
+    #ro.com.google.ime.kb_pad_port_b=8 
     ro.com.google.ime.kb_pad_port_l=11 \
     ro.com.google.ime.kb_pad_port_r=11 \
     ro.com.google.ime.height_ratio=1.025
