@@ -14,6 +14,7 @@ $(call inherit-product, device/google/gs201/lineage_common.mk)
 
 include device/google/pantah/cheetah/device-lineage.mk
 include vendor/pixel-framework/config.mk
+include vendor/pixelparts/pixelparts.mk
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
@@ -40,7 +41,7 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 WITH_GAPPS := true
 WITH_GMS := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_SUPPORTS_GOOGLE_CAMERA := true
+#TARGET_SUPPORTS_GOOGLE_CAMERA := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=cheetah \
