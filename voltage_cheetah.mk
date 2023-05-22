@@ -14,18 +14,11 @@ $(call inherit-product, device/google/gs201/lineage_common.mk)
 
 include device/google/pantah/cheetah/device-lineage.mk
 include vendor/pixel-framework/config.mk
-include vendor/pixelparts/pixelparts.mk
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 7 Pro
 PRODUCT_NAME := voltage_cheetah
-
-# Uset scudo
-#PRODUCT_USE_SCUDO := true
-
-# partner modules
-#MODULE_BUILD_FROM_SOURCE := true
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 3120
@@ -42,10 +35,12 @@ VOLTAGE_BUILD_TYPE := OFFICIAL
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
+
+# gms
 WITH_GAPPS := true
 WITH_GMS := true
-TARGET_IS_PIXEL_7 := true
-
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_GOOGLE_CAMERA := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=cheetah \

@@ -13,6 +13,7 @@ $(call inherit-product, device/google/pantah/aosp_panther.mk)
 $(call inherit-product, device/google/gs201/lineage_common.mk)
 
 include device/google/pantah/panther/device-lineage.mk
+include vendor/pixel-framework/config.mk
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
@@ -23,21 +24,23 @@ PRODUCT_NAME := voltage_panther
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
-VOLTAGE_BUILD_TYPE := OFFICIAL
-
 # Graphene OS 
-GrapheneApps := true
+GrapheneApps := false
 
 # Browser
 SMARTCOOKIEWEB := false
 
-
 # Voltage features 
+VOLTAGE_BUILD_TYPE := OFFICIAL
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_FACE_UNLOCK_SUPPORTED := false
 
+
+# gms
 WITH_GAPPS := true
 WITH_GMS := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_GOOGLE_CAMERA := true
 
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
