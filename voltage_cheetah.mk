@@ -13,8 +13,6 @@ $(call inherit-product, device/google/pantah/aosp_cheetah.mk)
 $(call inherit-product, device/google/gs201/lineage_common.mk)
 
 include device/google/pantah/cheetah/device-lineage.mk
-include vendor/pixel-framework/config.mk
-include vendor/pixelparts/pixelparts.mk
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
@@ -25,23 +23,23 @@ PRODUCT_NAME := voltage_cheetah
 TARGET_SCREEN_HEIGHT := 3120
 TARGET_SCREEN_WIDTH := 1440
 
-# Graphene OS 
-GrapheneApps := false
-
-# Browser
-SMARTCOOKIEWEB := false
-
 # Voltage features 
 VOLTAGE_BUILD_TYPE := OFFICIAL
 EXTRA_UDFPS_ANIMATIONS := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
 
 
 # gms
-WITH_GAPPS := true
-WITH_GMS := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-#TARGET_SUPPORTS_GOOGLE_CAMERA := true
+ifeq ($(WITH_GAPPS), true)
+    include vendor/pixel-framework/config.mk
+    include vendor/pixelparts/pixelparts.mk
+    TARGET_FACE_UNLOCK_SUPPORTED := true
+    TARGET_SUPPORTS_GOOGLE_RECORDER := true
+    #TARGET_INCLUDE_STOCK_ARCORE := true
+    TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+else
+    TARGET_FACE_UNLOCK_SUPPORTED := true
+    SMARTCOOKIEWEB := true
+endif
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=cheetah \
