@@ -6,4 +6,4 @@
 
 include device/google/pantah/BoardConfigLineage.mk
 
-include vendor/google/cheetah/BoardConfigVendor.mk
+#include vendor/google/cheetah/BoardConfigVendor.mk
