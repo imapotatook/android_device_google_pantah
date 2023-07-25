@@ -47,8 +47,8 @@ endif
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=panther \
-    PRIVATE_BUILD_DESC="panther-user 13 TQ2A.230705.001 9891397 release-keys"
+    PRIVATE_BUILD_DESC="panther-user 13 TQ2A.230705.0001 10216780 release-keys"
 
-BUILD_FINGERPRINT := google/panther/panther:13/TQ2A.230501.002/9891397:user/release-keys
+BUILD_FINGERPRINT := google/panther/panther:13/TQ2A.230705.001/10216780:user/release-keys
 
 #$(call inherit-product, vendor/google/panther/panther-vendor.mk)

@@ -36,6 +36,7 @@ ifeq ($(WITH_GAPPS), true)
     TARGET_SUPPORTS_GOOGLE_RECORDER := true
     #TARGET_INCLUDE_STOCK_ARCORE := true
     TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+    SMARTCOOKIEWEB := false
 else
     TARGET_FACE_UNLOCK_SUPPORTED := true
     SMARTCOOKIEWEB := true
@@ -43,8 +44,8 @@ endif
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=cheetah \
-    PRIVATE_BUILD_DESC="cheetah-user 13 TQ3A.230507.0012 10216780 release-keys"
+    PRIVATE_BUILD_DESC="cheetah-user 13 TQ3A.230705.001 10216780 release-keys"
 
 BUILD_FINGERPRINT := google/cheetah/cheetah:13/TQ3A.230705.001/10216780:user/release-keys
 
-$(call inherit-product, vendor/google/cheetah/cheetah-vendor.mk)
+#$(call inherit-product, vendor/google/cheetah/cheetah-vendor.mk)
